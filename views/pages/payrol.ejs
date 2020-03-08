@@ -1,0 +1,269 @@
+
+<%- contentFor('body') %>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--Home page style-->
+        <nav>
+            <div class="container">
+                <div class="nav-top clearfix">
+                    <div class="logo">
+                        <a  href="" class="navbar-brand"><img src="assets/images/logo3.png" alt="Logo"  /></a>
+                    </div>
+
+                    <div class="head_top_social pull-right">
+                        <ul class="list-inline">
+                            <li><a href="mailto:info@ocyservice.co.uk?subject=Enquiry" ><i class="fa fa-envelope"></i>info@ocyservice.co.uk</a></li>
+                            <li><a href=""><i class="fa fa-phone"></i>079 834 90 5000</a></li>
+                            <li class="top_socail">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-pinterest-p"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="main-nav navbar-collapse collapse">
+                <div class="container">
+                    <div class="minilogo">
+                        <a  href="" class="navbar-brand"><img src="assets/images/logo2.png" alt="Logo" /></a>
+                    </div>
+                    <ul class="nav nav-justified">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="#service">ACCOUNTING</a></li>
+                        <li><a href="/products">IT CONSULTANCY</a></li>
+                        <li><a href="/aboutus">ABOUT</a></li>
+                        <li><a class="active" href="#payrol">Payrol Calculator</a></li>
+                        <li><a href="/contactus">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="payrolForm" >
+            <h2>Net Salary Calculator</h2>
+
+            <form class="form-horizontal" class="container" action="/payrol" method="POST">
+            <!-- Select Basic -->
+            
+            <div class="row">
+                <div class="form-group">
+                        <label class="col-md-4 control-label" for="selectbasic">Salary</label>
+                        <select id="period" name="period" >
+                                <option value="1">Per Year</option>
+                                <option value="2">Per Month</option>
+                                <option value="3">Per Week</option>
+                        </select>
+                        <div class="col-md-4">
+                                <input id="number" type="number" value="" name="salary">
+                        </div>
+                </div>
+            </div>
+       
+
+            <div class="row">
+                    <div class="form-group">
+                            <label class="col-md-4 control-label" for="selectbasic">Select Tax Year</label>
+                            <div class="col-md-4">
+                              <select id="taxYear" name="taxYear" class="form-control">
+                                <option  value="20">2019/20</option>
+                                <option  value="19">2018/19</option>
+                                <option  value="18">2017/18</option>
+                              </select>
+                            </div>
+                    </div>
+            </div>
+           
+            <!-- Select Basic -->
+            <div class="row">
+                    <div class="form-group">
+                            <label class="col-md-4 control-label" for="sloan">Repay Student Loan</label>
+                            <div class="col-md-4">
+                            <select id="sLoan" name="sLoan" class="form-control">
+                                <option value="1">No</option>
+                                <option value="2">Yes - Plan 1</option>
+                                <option value="3">Yes - Plan 2</option>
+                            </select>
+                            </div>
+                    </div>
+            </div>
+           
+            <div class="row">
+                <!-- Text input-->
+                <div class="form-group">
+                        <label class="col-md-4 control-label" for="taxCode">Tax Code</label>  
+                        <div class="col-md-4">
+                        <input id="taxCode" name="taxCode" type="text" placeholder="Tax Code" class="form-control input-md"  >
+                        <span class="help-block">help</span>  
+                        </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">Calculate</button>
+        </form>
+
+        <div class="separator"></div>
+
+        <h2> <%= text%> </h2>
+
+
+        <div class="separator"></div>
+
+        <table class="table table-inverse">
+                <h2>Personal PAYE Allowances</h2>
+            <thead>
+              <tr>
+                <th>Allowance</th>
+                <th>2016/17</th>
+                <th>2017/18</th>
+                <th>2018/19</th>
+                <th>2019/20</th>
+              </tr>
+            </thead>
+      
+            <tbody>
+             <tr>
+                <td>Basic</td>
+                <td>£11,000</td>
+                <td>£11,500</td>
+                <td>£11,850</td>
+                <td>£12,500</td>    
+             </tr>
+             <tr>
+                 <td>People born between 6th April 1938 - 5th April 1948</td>
+                 <td>£11,000</td>
+                 <td>£11,500</td>
+                 <td>£11,850</td>
+                 <td>£12,500</td>    
+             </tr>
+             <tr>
+                    <td>People born before 6th April 1938</td>
+                    <td>£11,000</td>
+                    <td>£11,500</td>
+                    <td>£11,850</td>
+                    <td>£12,500</td>    
+                 </tr>
+                 <tr>
+                     <td>Marriage Allowance</td>
+                     <td>£1,100</td>
+                     <td>£1,150</td>
+                     <td>£1,190</td>
+                     <td>£1,250</td>    
+                 </tr>
+            </tbody>
+      
+          </table>
+        
+
+          <div class="separator"></div>
+
+          <table class="table table-inverse">
+                  <h2>Tax Brackets</h2>
+              <thead>
+                <tr>
+                  <th>Tax Rates</th>
+                  <th>2016/17</th>
+                  <th>2017/18</th>
+                  <th>2018/19</th>
+                  <th>2019/20</th>
+                </tr>
+              </thead>
+        
+              <tbody>
+               <tr>
+                  <td>Basic rate 20%</td>
+                  <td>£0 - £32,000</td>
+                  <td>£0 - £33,500</td>
+                  <td>£0 - 34,500</td>
+                  <td>£0 - 37,500</td>    
+               </tr>
+               <tr>
+                   <td>Higher Rate 40%</td>
+                   <td>£32,001 - £150,000</td>
+                   <td>£33,501 - £150,000</td>
+                   <td>	£34,501 - £150,000</td>
+                   <td>	£37,501 - £150,000</td>    
+               </tr>
+               <tr>
+                      <td>Additional Rate 45%</td>
+                      <td>£150,001+</td>
+                      <td>£150,001+</td>
+                      <td>£150,001+</td>
+                      <td>£150,001+</td>    
+                   </tr>
+              </tbody>
+        
+            </table>
+
+
+            <div class="separator"></div>
+
+            <table class="table table-inverse">
+                    <h2>National Insurance</h2>
+                <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>2016/17</th>
+                    <th>2017/18</th>
+                    <th>2018/19</th>
+                    <th>2019/20</th>
+                  </tr>
+                </thead>
+          
+                <tbody>
+                 <tr>
+                    <td>Weekly Lower earnings limit, primary Class 1</td>
+                    <td>£112</td>
+                    <td>£113</td>
+                    <td>£116</td>
+                    <td>£118</td>    
+                 </tr>
+                 <tr>
+                     <td>Weekly Upper earnings limit, primary Class 1</td>
+                     <td>£827</td>
+                     <td>£866</td>
+                     <td>£892</td>
+                     <td>£962</td>    
+                 </tr>
+                 <tr>
+                        <td>Weekly Primary threshold</td>
+                        <td>£155</td>
+                        <td>£157</td>
+                        <td>£162</td>
+                        <td>£166</td>    
+                     </tr>
+                     <tr>
+                         <td>Weekly Secondary threshold</td>
+                         <td>£156</td>
+                         <td>£157</td>
+                         <td>£162</td>
+                         <td>£166</td>    
+                     </tr>
+                     <tr>
+                            <td>Weekly Upper Secondary Threshold for U21s</td>
+                            <td>£827</td>
+                            <td>£866</td>
+                            <td>£892</td>
+                            <td>£962</td>    
+                        </tr>
+                        <tr>
+                                <td>Apprentice Upper Secondary Threshold for U25s</td>
+                                <td>£827</td>
+                                <td>£866</td>
+                                <td>£892</td>
+                                <td>£962</td>    
+                            </tr>
+                </tbody>
+          
+              </table>
+        </section>
