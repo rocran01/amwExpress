@@ -2,7 +2,7 @@ const express = require('express');
 const staticRouter = require('express').Router();
 const path = require('path');
 const mysql = require('mysql');
-const con = require('../db/auth/db');
+
 
 
 staticRouter.post('/payrol',(req, res) => {

@@ -6,7 +6,7 @@ const router = require('express').Router();
 const JWT = require('jsonwebtoken');
 const mysql = require('mysql');
 const {JWT_SECRET} = require('../config/index');
-const con = require('../db/auth/db');
+
 const request = require('request');
 const https = require('https');
 
